@@ -1,3 +1,78 @@
+## Run the App
+
+Application can be run as a boot app using below command.
+
+````shell script
+$ mvn spring-boot:run
+````
+Set of test cases is added for unit testing of services.
+You can run the test cases with below command.
+
+````shell script
+$ mvn test
+````
+
+## Service endpoints to use
+
+
+1)	To get a list of all available currencies
+
+`        http://localhost:8080/api/currencies
+
+        Sample Request : curl -X GET --header 'Accept: application/json' 'http://localhost:8080/api/currencies' `
+
+
+2)   To get all EUR-FX exchange rates at all available dates
+
+		  http://localhost:8080/api/rates
+
+		  http://localhost:8080/api/rates?page={page}&perPage={size}&sortBy={sortfield} 
+
+        [with pagination and sorting. Current available sort {rateDate}]
+        http://localhost:8080/api/rates?page=1&perPage=2&sortBy=rateDate
+
+
+		  Sample get all Rates Request : curl -X GET --header 'Accept: application/json' 'http://localhost:8080/api/rates'	
+		  Sample get Rates with Page and Sort Request : curl -X GET --header 'Accept: application/json' 'http://localhost:8080/api/rates?page=1&perPage=2&sortBy=rateDate'
+
+
+
+
+3)	To get the EUR-FX exchange rate at particular day.
+      Date Format yyyy-MM-dd (2022-08-30)
+
+      http://localhost:8080/api/rates/{date}
+
+      http://localhost:8080/api/rates/2022-08-30
+
+     Sample get Rates by date Request :curl -X GET --header 'Accept: application/json' 'http://localhost:8080/api/rates/2022-08-30'`](http://localhost:8080/api/rates)](http://localhost:8080/api/rates)](http://localhost:8080/api/rates)
+
+
+
+4)	To get a foreign exchange amount for a given currency converted to EUR on a particular day
+      Date Format yyyy-MM-dd (2022-08-30)
+
+      http://localhost:8080/api/convertcurrency/date/{date}/currency/{currencycode}/amount/{amount}
+
+      http://localhost:8080/api/convertcurrency/date/2022-08-30/currency/AUD/amount/100
+
+     ` Sample currency conversion Request :curl -X GET --header 'Accept: application/json' 'http://localhost:8080/api/convertcurrency/date/2022-08-30/currency/AUD/amount/100'`
+
+
+5)	Swagger Endpoint :
+
+	 http://localhost:8080/swagger-ui.html
+
+
+
+
+
+# Debugging
+
+
+Log file path = /logs/currency_convertion_app.log
+
+Rate files path = /dailyrate/files
 # Crewmeister Test Assignment - Java Backend Developer
 
 ## Intro

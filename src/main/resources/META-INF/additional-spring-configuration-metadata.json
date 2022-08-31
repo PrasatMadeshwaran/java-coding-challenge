@@ -1,0 +1,42 @@
+{"properties": [
+  {
+    "name": "app.rate.download.url",
+    "type": "java.lang.String",
+    "description": "A description for 'app.rate.download.url'"
+  },
+  {
+    "name": "app.rate.file.target",
+    "type": "java.lang.String",
+    "description": "A description for 'app.rate.file.target'"
+  },
+  {
+    "name": "app.rate.download.format",
+    "type": "java.lang.String",
+    "description": "A description for 'app.rate.download.format'"
+  },
+  {
+    "name": "app.rate.download.currencies",
+    "type": "java.lang.String",
+    "description": "A description for 'app.rate.download.currencies'"
+  },
+  {
+    "name": "app.rate.download.endpoint",
+    "type": "java.lang.String",
+    "description": "A description for 'app.rate.download.endpoint'"
+  },
+  {
+    "name": "app.rate.filename.pattern",
+    "type": "java.lang.String",
+    "description": "A description for 'app.rate.filename.pattern'"
+  },
+  {
+    "name": "app.file.api.endpoint",
+    "type": "java.lang.String",
+    "description": "A description for 'app.file.api.endpoint'"
+  },
+  {
+    "name": "rate.refresh.cron.expression",
+    "type": "java.lang.String",
+    "description": "A description for 'rate.refresh.cron.expression'"
+  }
+]}
