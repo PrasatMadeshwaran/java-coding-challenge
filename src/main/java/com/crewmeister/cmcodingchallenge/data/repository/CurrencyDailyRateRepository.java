@@ -16,14 +16,14 @@ import java.util.List;
 @Repository
 public interface CurrencyDailyRateRepository extends PagingAndSortingRepository<CurrencyDailyRate, Long> {
 
-	@Query("SELECT DISTINCT a.sourceCurrency FROM DailyRate a")
+	@Query("SELECT DISTINCT a.sourceCurrency FROM CurrencyDailyRate a")
 	List<String> findDistinctCurrencies();
 
 	List<CurrencyDailyRate> findByRateDate(Date rateDate);
 
 	CurrencyDailyRate findByRateDateAndSourceCurrency(Date rateDate, String sourceCurrency);
 	
-	@Query("SELECT a.sourceCurrency as sourceCurrency, MAX(a.rateDate) as rateDate FROM DailyRate a GROUP BY a.sourceCurrency")
+	@Query("SELECT a.sourceCurrency as sourceCurrency, MAX(a.rateDate) as rateDate FROM CurrencyDailyRate a GROUP BY a.sourceCurrency")
 	List<Object[]> findMaximumRateDateByCurrency();
 
 
